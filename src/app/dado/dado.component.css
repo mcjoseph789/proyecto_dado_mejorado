@@ -1,0 +1,72 @@
+
+ h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto 40px;
+  perspective: 1000px;
+  perspective-origin: 50% 100%;
+  animation: colors 5s infinite;
+}
+
+
+.dot {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 15px;
+  animation: dots 5s infinite;
+}
+
+.front .dot1 { top: 85px; left: 85px; }
+.back .dot1 { top: 45px; left: 45px; }
+.back .dot2 { top: 125px; left: 125px; }
+.right .dot1 { top: 45px; left: 45px; }
+.right .dot2 { top: 85px; left: 85px; }
+.right .dot3 { top: 125px; left: 125px; }
+.left .dot1 { top: 45px; left: 45px; }
+.left .dot2 { top: 45px; left: 125px; }
+.left .dot3 { top: 125px; left: 45px; }
+.left .dot4 { top: 125px; left: 125px; }
+.top .dot1 { top: 45px; left: 45px; }
+.top .dot2 { top: 45px; left: 125px; }
+.top .dot3 { top: 85px; left: 85px; }
+.top .dot4 { top: 125px; left: 45px; }
+.top .dot5 { top: 125px; left: 125px; }
+.bottom .dot1 { top: 45px; left: 45px; }
+.bottom .dot2 { top: 45px; left: 85px; }
+.bottom .dot3 { top: 45px; left: 125px; }
+.bottom .dot4 { top: 125px; left: 45px; }
+.bottom .dot5 { top: 125px; left: 85px; }
+.bottom .dot6 { top: 125px; left: 125px; }
+
+@keyframes colors{
+  0%{color:red;transform: rotateY(0deg);background-color: purple;}
+  8.33%{color:orange;background-color: blue;}
+  16.66%{color:yellow;background-color: cyan;}
+  24.99%{color:rgb(255, 255, 255);background-color: green;}
+  33.32%{color:cyan;background-color: yellow;}
+  41.65%{color:blue;background-color: orange;}
+  49.98%{color:purple;transform: rotateY(180deg);background-color: red;}
+  58.31%{color:blue;background-color: orange;}
+  66.64%{color:cyan;background-color: yellow;}
+  74.97%{color:rgb(255, 255, 255);background-color: green;}
+  83.3%{color:yellow;background-color: cyan;}
+  91.63%{color:orange;background-color: blue;}
+  99.96%{color:red;transform: rotateY(0deg);background-color: purple;}
+}
+
+@keyframes dots{
+  0%{background-color: rgb(255, 255, 255);}
+  30%{background-color: rgb(0, 0, 0);}
+  60%{background-color: rgb(255, 255, 255);}
+  90%{background-color: rgb(0, 0, 0);}
+  100%{background-color: rgb(255, 255, 255);}
+}
